@@ -1,0 +1,84 @@
+.basicInfo {
+    margin-bottom: 5px;
+    padding: 10px;
+    display: inline-block;
+    justify-content: space-between;
+}
+
+.info {
+    display: inline-block;
+}
+
+.image {
+    display: inline-block;
+    right: 0;
+}
+
+.profile-photo {
+    /* height: 280px; */
+    /* pointer-events: none;
+    padding-left: 30px;
+    border: ; */
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    background-color: #fdfdfd;
+    filter: blur(0);
+    max-width: 100%;
+    transition: opacity .3s,filter .3s;
+    opacity: 1;
+  }
+  
+  /* @media (prefers-reduced-motion: no-preference) {
+    .profile-photo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  } */
+
+.basicInfo div {
+    margin-top: 15px;
+}
+
+.seagate {
+    left: 5px;
+}
+.landgate {
+    margin-left: 15px;
+}
+
+.circle {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: #456990;
+    border-radius: 20%;
+    float: left;
+}
+
+.name-container {
+    position: relative;
+    height: 50px;
+}
+
+.name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    position: relative;
+}
+
+.name::before {
+    padding: 50px;
+}
+
+.phone {
+    display: block;
+}
+
+.address {
+    display: block;
+}
+
+.email {
+    display: block;
+}

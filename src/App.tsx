@@ -1,9 +1,19 @@
 /* import React from 'react';
 import logo from './logo.svg';
-import './App.css'; */
+*/
 // import MarkdownEditor from './MarkdownEditor'
-import { Cv } from './components/Cv';
-import { cvData } from './testData'
+import './App.css';
+
+
+import { library } from '@fortawesome/fontawesome-svg-core'
+// import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faCheckSquare, faCoffee, faSuitcase, faUser, faMapMarker, faAt, faMobile } from '@fortawesome/free-solid-svg-icons'
+
+import { Cv } from './components/Cv/Cv';
+import { cvData } from './testData';
+
+library.add(faCheckSquare, faCoffee, faSuitcase, faUser, faMapMarker, faAt, faMobile);
+
 
 function App () {
   return (
@@ -22,8 +32,10 @@ function App () {
           Learn React
         </a> */}
         {/* <MarkdownEditor /> */}
-        <Cv {...cvData} />
       </header>
+      <div className='App-container'>
+        <Cv {...cvData} />
+      </div>
     </div>
   );
 }

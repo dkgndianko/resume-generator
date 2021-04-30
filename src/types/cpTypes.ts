@@ -7,6 +7,7 @@ export interface IContact {
      name: string;
      address: string;
      country: string;
+     website: string;
  }
 
  export interface IUniversity {
@@ -20,12 +21,13 @@ export interface IContact {
      lastName: string;
      civility: string;
      nationality: string;
-     addresse: string;
+     address: string;
      contacts: Array<IContact>;
      photoUrl: string;
  }
 
  export interface ICvEntry {
+     title: string;
      startDate: Date;
      endDate?: Date;
      company: ICompany;

@@ -1,0 +1,17 @@
+.cv {
+    max-width: 100%;
+    margin: 15px;
+    padding: 0;
+    transition: left .3s,right .3s;
+    line-height: 1.5rem;
+    color: #7b8384;
+    font-size: 15px;
+    font-family: Happy Monkey,comfortaa,Century Gothic,Droid Sans,sans-serif;
+    background-image: linear-gradient(90deg,#eee 0,#eee 10%,transparent);
+    overflow-X: hidden;
+    perspective: 1000px;
+}
+
+.resume {
+    margin: auto 50px
+}
