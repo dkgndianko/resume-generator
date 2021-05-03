@@ -61,8 +61,15 @@ export interface IContact {
  export type ICvEducationSection = ICvSection<ICvEducationEntry>;
  export type ICvEducationSubSection = ICvSubSection<ICvEducationEntry>;
 
- export interface CvData {
+ export interface OldCvData {
      basicInfo: ICvBasicInformation;
      education: Array<ICvEducationEntry>;
      entries: Array<ICvEntry>;
  }
+
+
+ export interface CvData {
+    basicInfo: ICvBasicInformation;
+    education: Array<ICvEducationEntry>;
+    sections: Array<ICvEntrySection>;
+}

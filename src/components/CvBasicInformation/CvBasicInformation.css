@@ -3,15 +3,17 @@
     padding: 10px;
     display: inline-block;
     justify-content: space-between;
+    width: 100%;
 }
 
 .info {
-    display: inline-block;
+    float: left;
+    width: 60%;
 }
 
 .image {
-    display: inline-block;
-    right: 0;
+    float: right;
+    width: 40%;
 }
 
 .profile-photo {
@@ -20,7 +22,6 @@
     padding-left: 30px;
     border: ; */
     background-size: cover;
-    width: 100%;
     height: auto;
     background-color: #fdfdfd;
     filter: blur(0);
@@ -48,9 +49,10 @@
 
 .circle {
     position: relative;
-    width: 50px;
+    width: 45px;
     height: 50px;
     background-color: #456990;
+    color: #fff;
     border-radius: 20%;
     float: left;
 }

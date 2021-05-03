@@ -46,8 +46,47 @@
     position: relative;
 }
 
-a[target=_blank]:after {
-    content: "\F08E";
+/* a[target=_blank]:after {
+    content: "\f35d";
     padding-left: .2rem;
-    font-family: FontAwesome;
+    font-family: "Font Awesome 5 Free";
+} */
+
+.entry-duration {
+    font-size: 14px;
+    color: #ff9800;
+    font-weight: 700;
+}
+
+.entry-summary {
+    font-size: .875rem;
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+.entry ul {
+    list-style: square;
+    margin: 0;
+}
+
+.techno {
+    color: #fff;
+    background-color: #ff9800;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.education:after, .entry:after {
+    content: "";
+    position: absolute;
+    left: -21px;
+    top: 20px;
+    bottom: -10px;
+    width: 2px;
+    background-color: #e4e4e4;
+}
+
+.entry-roles, .entry-achievements, .entry-technologies {
+    padding-bottom: 20px;
 }
