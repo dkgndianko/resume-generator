@@ -1,0 +1,9 @@
+import { library } from '@fortawesome/fontawesome-svg-core'
+// import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faCheckSquare, faCoffee, faSuitcase, faUser, faMapMarker, faAt, faMobile, faExternalLinkAlt, faTrophy, faCrown } from '@fortawesome/free-solid-svg-icons'
+
+
+
+export const loadFontAwesome = () => {
+    library.add(faCheckSquare, faCoffee, faSuitcase, faUser, faMapMarker, faAt, faMobile, faExternalLinkAlt, faTrophy, faCrown);
+}

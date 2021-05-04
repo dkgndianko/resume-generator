@@ -24,7 +24,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6001 -c .storybook"
   },
   "eslintConfig": {
     "extends": [
@@ -45,7 +46,10 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addons": "^6.2.9",
+    "@storybook/react": "^6.2.9",
     "@types/remarkable": "^2.0.1",
-    "lerna": "^4.0.0"
+    "lerna": "^4.0.0",
+    "storybook-addon-jsx": "^7.3.9"
   }
 }
