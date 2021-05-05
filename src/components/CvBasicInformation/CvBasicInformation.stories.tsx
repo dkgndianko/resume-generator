@@ -1,9 +1,8 @@
 import React from 'react';
 
-import { storiesOf } from '@storybook/react';
-
 import { BasicInformation } from './CvBasicInformation';
 import { IContact, ICvBasicInformation } from '../../types/cpTypes';
+
 
 
 const basicInfo: ICvBasicInformation = {
@@ -25,18 +24,12 @@ const phone: IContact = {
     type: 'phone',
     contact: '+221 77 865 00 00'
 }
+export const withoutContacts = () => <BasicInformation {...basicInfo} />;
+export const withEmail = () => <BasicInformation {...basicInfo} contacts={[email]}/>;
+export const withPhone = () => <BasicInformation {...basicInfo} contacts={[phone]}/>;
+export const withPhoneAndEmail = () => <BasicInformation {...basicInfo} contacts={[email, phone]}/>;
 
 
-storiesOf('Basic information', module)
-.add('without contacts', () => (
-    <BasicInformation {...basicInfo} />
-))
-.add('with email', () => (
-    <BasicInformation {...{...basicInfo, contacts: [email]} } />
-))
-.add('with phone', () => (
-    <BasicInformation {...{...basicInfo, contacts: [phone]}} />
-))
-.add('with email and phone', () => (
-    <BasicInformation {...{...basicInfo, contacts: [phone, email]}} />
-));
+const title = { title: 'Basic information' };
+
+export default title;
