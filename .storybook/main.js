@@ -4,6 +4,7 @@ module.exports = {
         '../src/components/**/*.stories.jsx',
     ],
     addons: [
-        'storybook-addon-jsx'
+        'storybook-addon-jsx',
+        '@storybook/addon-knobs'
     ]
 }

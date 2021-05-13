@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { ICvEntry, ICvSection } from "../../types/cpTypes";
+import { ICvEntrySection } from "../../types/cpTypes";
 import {Entry} from "../CvEntry/CvEntry";
 // import "./CvSection.css";
 
-export function SectionComponent ({title, items}: ICvSection<ICvEntry>) {
+export function SectionComponent ({title, items}: ICvEntrySection) {
     return (
     <div>
         <div className="section-title-container">

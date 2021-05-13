@@ -14,6 +14,7 @@ export interface IContact {
      name: string;
      address: string;
      country: string;
+     website: string;
  }
 
  export interface ICvBasicInformation {
@@ -42,6 +43,7 @@ export interface IContact {
      endDate?: Date;
      university: IUniversity;
      diploma: string;
+     field: string;
  }
 
  export interface ICvSubSection<T> {
@@ -70,6 +72,6 @@ export interface IContact {
 
  export interface CvData {
     basicInfo: ICvBasicInformation;
-    education: Array<ICvEducationEntry>;
+    educations: Array<ICvEducationSection>;
     sections: Array<ICvEntrySection>;
 }

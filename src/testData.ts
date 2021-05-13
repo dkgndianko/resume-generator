@@ -42,16 +42,18 @@ const entries: Array<ICvEntry> = [
   }
 ]
 
-const education: Array<ICvEducationEntry> = [
+const educations: Array<ICvEducationEntry> = [
   {
     startDate: new Date('2020-03-11'),
     endDate: new Date('2021-01-31'),
     university: {
-      name: 'Gembal Fokk',
+      name: 'Gembal Fokk University',
       address: 'Nowhere',
       country: 'Randatu',
+      website: 'https://gembalfokk.univ.nowhere'
     },
-    diploma: 'Xaqataay'
+    diploma: 'Xaqataay',
+    field: 'Reetaan'
   }
 ];
 
@@ -74,5 +76,11 @@ export const cvData: CvData = {
         subsections: []
     }
   ],
-    education
+  educations: [
+      {
+        title: 'Education',
+        items: educations,
+        subsections: []
+      }
+    ]
 }
