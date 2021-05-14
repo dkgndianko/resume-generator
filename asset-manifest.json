@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/dkgndianko-resume/static/css/main.6f4bdb3c.chunk.css",
+    "main.js": "/dkgndianko-resume/static/js/main.c020a6c2.chunk.js",
+    "main.js.map": "/dkgndianko-resume/static/js/main.c020a6c2.chunk.js.map",
+    "runtime-main.js": "/dkgndianko-resume/static/js/runtime-main.bbceef21.js",
+    "runtime-main.js.map": "/dkgndianko-resume/static/js/runtime-main.bbceef21.js.map",
+    "static/js/2.d4ff5b9e.chunk.js": "/dkgndianko-resume/static/js/2.d4ff5b9e.chunk.js",
+    "static/js/2.d4ff5b9e.chunk.js.map": "/dkgndianko-resume/static/js/2.d4ff5b9e.chunk.js.map",
+    "static/js/3.e43d1409.chunk.js": "/dkgndianko-resume/static/js/3.e43d1409.chunk.js",
+    "static/js/3.e43d1409.chunk.js.map": "/dkgndianko-resume/static/js/3.e43d1409.chunk.js.map",
+    "index.html": "/dkgndianko-resume/index.html",
+    "static/css/main.6f4bdb3c.chunk.css.map": "/dkgndianko-resume/static/css/main.6f4bdb3c.chunk.css.map",
+    "static/js/2.d4ff5b9e.chunk.js.LICENSE.txt": "/dkgndianko-resume/static/js/2.d4ff5b9e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bbceef21.js",
+    "static/js/2.d4ff5b9e.chunk.js",
+    "static/css/main.6f4bdb3c.chunk.css",
+    "static/js/main.c020a6c2.chunk.js"
+  ]
+}
