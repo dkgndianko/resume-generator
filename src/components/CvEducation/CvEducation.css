@@ -3,6 +3,7 @@
     transform: translateX(0) rotate(0);
     opacity: 1;
     transition: transform .4s,opacity .4s;
+    padding-bottom: 20px;
 }
 
 .education-title {

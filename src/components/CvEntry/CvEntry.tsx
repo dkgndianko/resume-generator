@@ -1,7 +1,16 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon, FontAwesomeIconProps } from '@fortawesome/react-fontawesome'
 import { ICvEntry } from "../../types/cpTypes";
 import  "./CvEntry.css";
 import {formatDate} from '../../utilities/dateUtils';
+
+function SubEntry({faProps, name}: {faProps: FontAwesomeIconProps, name: string}) {
+    return (
+        <span className='sub-entry'>
+            <FontAwesomeIcon {...faProps} />
+            {" "} {name}:
+        </span>
+    );
+}
 
 export function Entry ({entry}: {entry: ICvEntry}) {
     return <div className="entry">
@@ -20,8 +29,7 @@ export function Entry ({entry}: {entry: ICvEntry}) {
         <div className="entry-summary"><p><strong>{entry.summary}</strong></p></div>
         { entry.roles.length > 0 && (
             <div className="entry-roles">
-                {/* Roles: */}
-                <FontAwesomeIcon icon="crown" size="2x" />
+                <SubEntry faProps={{icon: 'crown', size: '2x'}} name="Roles" />
                 <ul>
                     {entry.roles.map((role, i) => (
                         <li key={i} className="entry-role">{role}</li>
@@ -32,8 +40,7 @@ export function Entry ({entry}: {entry: ICvEntry}) {
 
         { entry.achievements.length > 0 && (
             <div className="entry-achievements">
-                {/* Achievements: */}
-                <FontAwesomeIcon icon="trophy" size="2x" />
+                <SubEntry faProps={{icon: 'trophy', size: '2x'}} name="Achievements" />
                 <ul>
                     {entry.achievements.map((achievement, i) => (
                         <li key={i} className="entry-achievement">{achievement}</li>

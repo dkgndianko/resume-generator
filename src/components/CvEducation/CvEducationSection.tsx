@@ -6,7 +6,7 @@ import './CvEducationSection.css';
 
 export function EducationSectionComponent ({title, items}: ICvEducationSection) {
     return (
-    <div>
+    <div className="education-section">
         <div className="educations-title-container">
             <i className="educations-icon">
                 <FontAwesomeIcon icon="graduation-cap" size="2x" />
