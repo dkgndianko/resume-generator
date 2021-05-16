@@ -1,0 +1,6 @@
+lsi: false
+safe: true
+name: Resume generator
+description: A generator of resume based on JSON data representing CV
+source: "https://dkgndianko.github.io/resume-generator"
+markdown: GFM
