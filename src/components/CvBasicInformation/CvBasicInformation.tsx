@@ -16,19 +16,19 @@ export function BasicInformation ( {firstName, lastName, civility, address, cont
                 <span className="landgate name">{civility} {firstName} {lastName}</span>
             </div>
             <div className="address">
-                <FontAwesomeIcon icon="map-marker" size="4x" className="seagate" />
+                <FontAwesomeIcon icon="map-marker" size="2x" className="seagate" />
                 <span className="landgate">{address}</span>
             </div>
             {emails.map((email, i) =>
                 <div className="email" key={`e${i}`} >
-                    <FontAwesomeIcon icon="at" size="3x" className="seagate" />
+                    <FontAwesomeIcon icon="at" size="2x" className="seagate" />
                     <span className="landgate">{email}</span>
                 </div>
             )}
 
             {phones.map((phone, i) =>
                 <div className="phone" key={`p${i}`} >
-                    <FontAwesomeIcon icon="mobile" size="4x" className="seagate" />
+                    <FontAwesomeIcon icon="mobile" size="2x" className="seagate" />
                     <span className="landgate">{phone}</span>
                 </div>
             )}
