@@ -6,7 +6,7 @@ import './App.css';
 
 
 import { Cv } from './components/Cv/Cv';
-import { cvData } from './testData';
+import { cvData } from './dkgndianko.resume';
 
 import {loadFontAwesome} from './faLoader';
 

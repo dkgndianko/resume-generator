@@ -44,6 +44,7 @@ export interface IContact {
      university: IUniversity;
      diploma: string;
      field: string;
+     comment?: string;
  }
 
  export interface ICvSubSection<T> {
