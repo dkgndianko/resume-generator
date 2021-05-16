@@ -79,5 +79,5 @@ To learn React, check out the [React documentation](https://reactjs.org/). -->
 
 Pull requests are welcome
 
-This was builte with :heart:b by [**Mouhamad Nd. THIAM**](https://github.com/dkgndianko)\
+This was builte with :heart: by [**Mouhamad Nd. THIAM**](https://github.com/dkgndianko)\
 Enjoy it!!!
