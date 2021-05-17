@@ -58,5 +58,5 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 Pull requests are welcome
 
-This was builte with :heart: by [**Mouhamad Nd. THIAM**](https://github.com/dkgndianko)\
+This was built with :heart: by [**Mouhamad Nd. THIAM**](https://github.com/dkgndianko)\
 Enjoy it!!!

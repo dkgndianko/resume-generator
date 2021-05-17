@@ -102,6 +102,6 @@
 .entry-roles, .entry-achievements {
     display: inline-grid;
 }
-.entry-achievements {
-    padding-left: 70px;
+.entry-roles {
+    margin-right: 70px;
 }
