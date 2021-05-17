@@ -28,7 +28,14 @@ jobs:
       - uses: borales/actions-yarn@v2.3.0
         with:
           cmd: install
-      - uses: fregante/setup-git-user@v1
+      # - uses: fregante/setup-git-user@v1
+      - name: Set user
+        run: |
+            cat >> .git/config << EOF
+            [user]
+              name = github-actions[bot]
+              email = 6567837+github-actions[bot]@users.noreply.github.com
+            EOF
       # - name: Configure Git user
       #   run: |
       #       git config --global user.email "thiamouhamadpro@gmail.com"
