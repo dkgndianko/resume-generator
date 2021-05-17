@@ -28,15 +28,18 @@ jobs:
       - uses: borales/actions-yarn@v2.3.0
         with:
           cmd: install
-      - name: Configure Git user
-        run: |
-            git config --global user.email "thiamouhamadpro@gmail.com"
-            git config --global user.name "Mouhamad Nd. THIAM"
-       # will run `yarn deploy` command
+      - uses: fregante/setup-git-user@v1
+      # - name: Configure Git user
+      #   run: |
+      #       git config --global user.email "thiamouhamadpro@gmail.com"
+      #       git config --global user.name "Mouhamad Nd. THIAM"
+      # will run `yarn deploy` command
+      - name: Setup token
+        run: git remote set-url origin https://dkgndianko:${{ secrets.GITHUB_TOKEN }}@github.com/dkgndianko/resume-generator
       - uses: borales/actions-yarn@v2.3.0
         env:
           SKIP_PREFLIGHT_CHECK: true
-          GIT_AUTHOR_NAME: Mouhamad Nd. THIAM
-          GIT_AUTHOR_EMAIL: thiamouhamadpro@gmail.com
+          # GIT_AUTHOR_NAME: Mouhamad Nd. THIAM
+          # GIT_AUTHOR_EMAIL: thiamouhamadpro@gmail.com
         with:
           cmd: deploy
