@@ -45,7 +45,7 @@ const entries: Array<ICvEntry> = [
     roles: ['Team Manager', 'Technical Referer', 'Chief Architect', 'Scrum Master'],
     achievements: ['Built a microservice app', 'TDD on all projects', 'CI/CD'],
     technologies: ['Typescript', 'JavaScript', 'NodeJs', 'Express', 'Swagger', 'Mongoose'],
-    summary: 'Inside a samll team based on Senegal, I was head of the backend on remote basis location. Working directly with front-end team to deliver APIs for Travel industry. Consuming third party providers we were able to deliver restfull APIs for Tour, Car and Cruise with payment integration for two of them.'
+    summary: 'Inside a small team based on Senegal, I was head of the backend on remote basis location. Working directly with front-end team to deliver APIs for Travel industry. Consuming third party providers we were able to deliver restfull APIs for Tour, Car and Cruise with payment integration for two of them.'
   },
   {
     title: 'Backend Team Leader',

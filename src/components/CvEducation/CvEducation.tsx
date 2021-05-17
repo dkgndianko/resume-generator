@@ -17,7 +17,7 @@ export function EducationEntry ({education}: {education: ICvEducationEntry}) {
             {/* {(!!education.comment && (<span> ({education.comment})</span>))} */}
             <span className='education-university'>
             {' '} at {' '}
-                <a href={education.university.website}>{education.university.name} ({education.university.country})<FontAwesomeIcon icon="external-link-alt" size="1x" /></a>
+                <a href={education.university.website}>{education.university.name} ({education.university.country}) <FontAwesomeIcon icon="external-link-alt" size="1x" /></a>
             </span>
         </div>
         <div className='education-duration'>{formatDate(education.startDate)}-{education.endDate?formatDate(education.endDate):'Present'}</div>
