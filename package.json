@@ -14,6 +14,7 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "html-pdf": "^3.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "^4.0.3",
@@ -28,7 +29,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6001 -c .storybook",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "gen-pdf": "gulp resume-pdf-gen"
   },
   "eslintConfig": {
     "extends": [
@@ -52,9 +54,22 @@
     "@storybook/addon-knobs": "^6.2.9",
     "@storybook/addons": "^6.2.9",
     "@storybook/react": "^6.2.9",
+    "@types/chalk": "^2.2.0",
+    "@types/gulp": "^4.0.8",
+    "@types/gulp-task-listing": "^0.0.32",
+    "@types/html-pdf": "^2.2.0",
     "@types/remarkable": "^2.0.1",
+    "chalk": "^4.1.1",
     "gh-pages": "^3.1.0",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-task-listing": "^1.1.0",
     "lerna": "^4.0.0",
-    "storybook-addon-jsx": "^7.3.9"
+    "storybook-addon-jsx": "^7.3.9",
+    "ts-node": "^9.1.1"
+  },
+  "engines": {
+    "node": "12.12.0",
+    "yarn": "^1.19.1"
   }
 }

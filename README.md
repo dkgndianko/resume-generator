@@ -38,6 +38,10 @@ For me it was:
 git remote add origin git@github.com:dkgndianko/resume-generator.git
 ```
 You can also use `https` and not `git` protocol
+You can add more options to the deployment. For example I can use this:
+```bash
+node_modules/.bin/gh-pages -d build -r git@github.com:dkgndianko/dkgndianko-resume.git -m "Fixing layout" -u "Mouhamad Ndiankho THIAM <thiamouhamadpro@gmail.com>"
+```
 
 ### `yarn build`
 
