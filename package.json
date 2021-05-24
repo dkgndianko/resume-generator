@@ -3,6 +3,7 @@
   "homepage": "https://dkgndianko.github.io/resume-generator",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
@@ -30,7 +31,7 @@
     "storybook": "start-storybook -p 6001 -c .storybook",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
-    "gen-pdf": "gulp resume-pdf-gen"
+    "gen-pdf": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' gulp resume-pdf-gen"
   },
   "eslintConfig": {
     "extends": [

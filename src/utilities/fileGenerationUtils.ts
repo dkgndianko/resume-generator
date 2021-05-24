@@ -7,9 +7,10 @@ import {Stream} from "stream";
  * @param content: any The content of the PDF
  * @return Promise<Stream>
  */
-export default async function generatePdfStream(title: string, content: any): Promise<Stream> {
+export default async function generatePdfStream(title: string, content: any, baseUrl?: string): Promise<Stream> {
     return  new Promise((resolve, reject) => {
-        pdf.create(content, {type: "pdf"}).toStream((err, stream) => {
+        // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
+        pdf.create(content, {type: "pdf", base: baseUrl, phantomArgs: ['--debug=true', '--cookies-file=./build/cookies.cook', '--local-to-remote-url-access=true']}).toStream((err, stream) => {
             if (err) {
                 reject(err);
                 return;
