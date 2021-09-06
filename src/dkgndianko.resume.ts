@@ -28,9 +28,9 @@ const entries: Array<ICvEntry> = [
       website: 'http://www.rocketrip.com'
     },
     roles: ['Chief Architect', 'Team Lead', 'Full stack developper', 'Scrum Master'],
-    achievements: ['Knowledge Transfer', 'Planning', 'Evaluation', 'Code Review'],
+    achievements: ['Sustainability Project', 'Knowledge Transfer', 'Planning', 'Evaluation', 'Code Review'],
     technologies: ['Python', 'Django', 'Typescript', 'JavaScript', 'React', 'Express', 'GraphQl', 'Graphene', 'MySQL', 'MongoDb', 'Lerna', 'Docker', 'Redis', 'RabbitMQ', 'Celery', 'AWS', 'Datadog', 'Sentry', 'Mixpanel', 'Sendgrid', 'Zendesk', 'Intercom'],
-    summary: 'As Team Leader, I\'m responsible of technology choices, team management, and code quality. This position is fully remote. I work with DevOps team for CI/CD part of the project and with Project Owner to define what to do next and plan for deliveries.'
+    summary: 'As Team Leader, I\'m responsible of technology choices, team management, and code quality. This position is fully remote. I work with DevOps team for CI/CD part of the project and with Project Owner to define what to do next and plan for deliveries. We took over an existing app focused on Business Travel. We added a sustainability module for C02 emissions.'
   },
   {
     title: 'Backend Team Leader',
