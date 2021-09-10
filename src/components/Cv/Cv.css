@@ -7,7 +7,7 @@
     color: #7b8384;
     font-size: 15px;
     font-family: Happy Monkey,comfortaa,Century Gothic,Droid Sans,sans-serif;
-    background-image: linear-gradient(90deg,#eee 0,#eee 10%,transparent);
+    /* background-image: linear-gradient(90deg,#eee 0,#eee 10%,transparent); */
     overflow-X: hidden;
     perspective: 1000px;
     box-shadow: 1px 10px 5px 10px #e0e0e0;
