@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/resume-generator/static/css/main.71173dcf.chunk.css",
-    "main.js": "/resume-generator/static/js/main.6872e536.chunk.js",
-    "main.js.map": "/resume-generator/static/js/main.6872e536.chunk.js.map",
+    "main.css": "/resume-generator/static/css/main.ab93206d.chunk.css",
+    "main.js": "/resume-generator/static/js/main.68bb1d99.chunk.js",
+    "main.js.map": "/resume-generator/static/js/main.68bb1d99.chunk.js.map",
     "runtime-main.js": "/resume-generator/static/js/runtime-main.5100b62f.js",
     "runtime-main.js.map": "/resume-generator/static/js/runtime-main.5100b62f.js.map",
     "static/js/2.6b4af20d.chunk.js": "/resume-generator/static/js/2.6b4af20d.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.f2ec9917.chunk.js": "/resume-generator/static/js/3.f2ec9917.chunk.js",
     "static/js/3.f2ec9917.chunk.js.map": "/resume-generator/static/js/3.f2ec9917.chunk.js.map",
     "index.html": "/resume-generator/index.html",
-    "static/css/main.71173dcf.chunk.css.map": "/resume-generator/static/css/main.71173dcf.chunk.css.map",
+    "static/css/main.ab93206d.chunk.css.map": "/resume-generator/static/css/main.ab93206d.chunk.css.map",
     "static/js/2.6b4af20d.chunk.js.LICENSE.txt": "/resume-generator/static/js/2.6b4af20d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.5100b62f.js",
     "static/js/2.6b4af20d.chunk.js",
-    "static/css/main.71173dcf.chunk.css",
-    "static/js/main.6872e536.chunk.js"
+    "static/css/main.ab93206d.chunk.css",
+    "static/js/main.68bb1d99.chunk.js"
   ]
 }
