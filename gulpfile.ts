@@ -41,9 +41,7 @@ async function generatePdf(src: string, dest: string) {
 }
 
 function _generatePdfFRomInput(input: string, dest: string) {
-    console.log(green(input));
     generatePdfStream('Resume', input)
-    // generatePdfStream('Resume', '<html><body>testingThis is for </body></html>')
     .then((stream: Stream) => {
         if (fs.existsSync(dest)) {
             console.log(cyan(`Removing existing file '${dest}'`));

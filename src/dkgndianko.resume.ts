@@ -93,7 +93,7 @@ const entries: Array<ICvEntry> = [
     endDate: new Date('2017-12-31'),
     company: sensoft,
     roles: ['Project Management', 'Integration', 'Interfacing'],
-    achievements: ['Bank mobility project (ACEP FEKKSILA Senegal)', 'On site fund collection automation (FUCEC Togo)', 'Small savings digitization (ASUSU SA Niger)', 'Digitization of transactions for cash desks (CTISN Senegal)'],
+    achievements: ['Bank mobility project (ACEP FEKKSILA Senegal)', 'On site fund collection automation (FUCEC Togo)', 'Small savings digitization (ASUSU SA Niger)', 'Digitization of transactions (CTISN Senegal)'],
     technologies: [],
     summary: 'I jumped in the world of project management to widen my knowledge. But at the same time I still get my hand in code. We were able to help some financial institutions to make their fund collection or transactions digital. We developed a mobile app interfacing with existing banking information systems.'
   },
