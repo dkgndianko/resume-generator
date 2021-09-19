@@ -100,8 +100,8 @@
 }
 
 .entry-roles, .entry-achievements {
-    display: inline-grid;
+    display: inline-table;
 }
 .entry-roles {
-    margin-right: 70px;
+    margin-right: 50px;
 }
