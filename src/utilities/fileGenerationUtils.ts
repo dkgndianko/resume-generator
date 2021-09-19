@@ -10,7 +10,7 @@ import {Stream} from "stream";
 export default async function generatePdfStream(title: string, content: any, baseUrl?: string): Promise<Stream> {
     return  new Promise((resolve, reject) => {
         // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
-        pdf.create(content, {type: "pdf", base: baseUrl, phantomArgs: ['--debug=true', '--cookies-file=./build/cookies.cook', '--local-to-remote-url-access=true']}).toStream((err, stream) => {
+        pdf.create(content, {type: "pdf", format: "A3", base: baseUrl, phantomArgs: ['--debug=true', '--cookies-file=./build/cookies.cook', '--local-to-remote-url-access=true']}).toStream((err, stream) => {
             if (err) {
                 reject(err);
                 return;
