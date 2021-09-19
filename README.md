@@ -53,6 +53,9 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+### `yarn gen-pdf`
+This command will generate a PDF of the resume under the *build* folder.
+
 
 ### Next steps:
     1. Add CI/CD (Cicle CI, Github Actions, etc.) for automatic deployment after a PR merge
