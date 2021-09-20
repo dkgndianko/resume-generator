@@ -1,4 +1,4 @@
-import 'intl/locale-data/jsonp/en';
+// import 'intl/locale-data/jsonp/  en';
 const DEFAULT_FORMAT: Intl.DateTimeFormatOptions = {'year': 'numeric', 'month': 'long'};
 const DEFAULT_LOCALE: string = 'en-Us';
 
