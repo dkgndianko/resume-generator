@@ -23,8 +23,8 @@ export function Cv ({basicInfo, sections, educations}: CvData) {
     return <div className="cv">
         <BasicInformation {...basicInfo} />
         <div className="resume">
-            {sections.map((section, i) => (<SectionComponent {...section} />))}
-            {educations.map((education, i) => (<EducationSectionComponent {...education} />))}
+            {sections.map((section, i) => (<SectionComponent {...section} key={i} />))}
+            {educations.map((education, i) => (<EducationSectionComponent {...education} key={i} />))}
         </div>
     </div>;
 }
