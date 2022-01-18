@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {formatDate } from '../../utilities/dateUtils';
 import { ICvEducationEntry } from "../../types/cpTypes";
 import './CvEducation.css';
+import { FormattedMessage } from 'react-intl';
 
 export function EducationEntry ({education}: {education: ICvEducationEntry}) {
     return (
@@ -10,13 +11,13 @@ export function EducationEntry ({education}: {education: ICvEducationEntry}) {
             <span className='education-diplomae'>
                 {education.diploma}
             </span>
-            {' '} in {' '}
+            {' '} <FormattedMessage id="entry.in"  defaultMessage="in" /> {' '}
             <span className='education-field'>
                 {education.field}
             </span>
             {/* {(!!education.comment && (<span> ({education.comment})</span>))} */}
             <span className='education-university'>
-            {' '} at {' '}
+            {' '} <FormattedMessage id="entry.at"  defaultMessage="at" /> {' '}
                 <a href={education.university.website}>{education.university.name} ({education.university.country}) <FontAwesomeIcon icon="external-link-alt" size="1x" /></a>
             </span>
         </div>

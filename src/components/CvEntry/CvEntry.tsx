@@ -2,6 +2,8 @@ import { FontAwesomeIcon, FontAwesomeIconProps } from '@fortawesome/react-fontaw
 import { ICvEntry } from "../../types/cpTypes";
 import  "./CvEntry.css";
 import {formatDate} from '../../utilities/dateUtils';
+import { FormattedMessage } from 'react-intl';
+import { getMessage } from '../../locales/LocalProvider';
 
 function SubEntry({faProps, name}: {faProps: FontAwesomeIconProps, name: string}) {
     return (
@@ -13,23 +15,24 @@ function SubEntry({faProps, name}: {faProps: FontAwesomeIconProps, name: string}
 }
 
 export function Entry ({entry}: {entry: ICvEntry}) {
+    // const intl = useIntl()
     return <div className="entry">
         <div className="entry-title">
             {entry.title} {" "}
             <span className="entry-location">
-            at <a href={entry.company.website} target="_blank" rel="noreferrer">{entry.company.name} {" "}
+            <FormattedMessage id="entry.at"  defaultMessage="at" /> <a href={entry.company.website} target="_blank" rel="noreferrer">{entry.company.name} {" "}
             <FontAwesomeIcon icon="external-link-alt" size="1x" />
             </a>
             </span>
         </div>
 
         <div className="entry-duration">
-            {formatDate(entry.startDate)} - {entry.endDate?formatDate(entry.endDate):"Now"}
+            {formatDate(entry.startDate)} - {entry.endDate?formatDate(entry.endDate):getMessage('date.now')}
         </div>
         <div className="entry-summary"><p><strong>{entry.summary}</strong></p></div>
         { entry.roles.length > 0 && (
             <div className="entry-roles">
-                <SubEntry faProps={{icon: 'crown', size: '2x'}} name="Roles" />
+                <SubEntry faProps={{icon: 'crown', size: '2x'}} name={getMessage('entry.roles')} />
                 <ul>
                     {entry.roles.map((role, i) => (
                         <li key={i} className="entry-role">{role}</li>
@@ -40,7 +43,7 @@ export function Entry ({entry}: {entry: ICvEntry}) {
 
         { entry.achievements.length > 0 && (
             <div className="entry-achievements">
-                <SubEntry faProps={{icon: 'trophy', size: '2x'}} name="Achievements" />
+                <SubEntry faProps={{icon: 'trophy', size: '2x'}} name={getMessage('entry.achievements')} />
                 <ul>
                     {entry.achievements.map((achievement, i) => (
                         <li key={i} className="entry-achievement">{achievement}</li>
@@ -53,7 +56,7 @@ export function Entry ({entry}: {entry: ICvEntry}) {
             <div className="entry-technologies">
                 Technologies:
                     {entry.technologies.map((techno, i) => (
-                        <span className="techno">{techno}</span>
+                        <span key={i} className="techno">{techno}</span>
                     ))}
             </div>
         )}
