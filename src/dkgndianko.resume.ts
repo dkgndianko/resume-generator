@@ -17,106 +17,114 @@ const sensoft: ICompany = {
   website: 'http://www.sensoft.sn'
 }
 
+const experience1: ICvEntry = {
+  title: 'Senior Developer',
+  startDate: new Date('2015-08-03'),
+  endDate: new Date('2016-02-05'),
+  company: sensoft,
+  roles: [],
+  achievements: [],
+  technologies: ['Java', 'Grails', 'Spring MVC', 'MySQL'],
+  summary: 'As principal developer working directly with the Lead developer, I was independent. I successfully built an accounting core module and settings module for a money transfer app.'
+};
+const experience2: ICvEntry = {
+  title: 'Lead Developer',
+  startDate: new Date('2016-02-12'),
+  endDate: new Date('2017-02-01'),
+  company: sensoft,
+  roles: ['Tech Lead', 'Senior Developer',],
+  achievements: ['Transactions module for money transfer app', 'Back office module for money transfer app'],
+  technologies: ['Java', 'Grails', 'Spring MVC', 'MySQL', 'Android', 'SqLite', 'Jenkins'],
+  summary: 'In that position I was a lead full-stack developer. We built a web and mobile (Android) money transfer app for several transactions: Sending, Payment, Refund, Cash In, Cash Out.'
+}
+const experience3: ICvEntry = {
+  title: 'Project Manager',
+  startDate: new Date('2017-02-10'),
+  endDate: new Date('2017-12-31'),
+  company: sensoft,
+  roles: ['Project Management', 'Integration', 'Interfacing'],
+  achievements: ['Bank mobility project (ACEP FEKKSILA Senegal)', 'On site fund collection automation (FUCEC Togo)', 'Small savings digitization (ASUSU SA Niger)', 'Digitization of transactions (CTISN Senegal)'],
+  technologies: [],
+  summary: 'I jumped in the world of project management to widen my knowledge. But at the same time I still get my hand in code. We were able to help some financial institutions to make their fund collection or transactions digital. We developed a mobile app interfacing with existing banking information systems.'
+};
+const experience4: ICvEntry = {
+  title: 'Chief of Development Unit',
+  startDate: new Date('2017-04-01'),
+  endDate: new Date('2018-09-20'),
+  company: sensoft,
+  roles: ['Team Manager', 'R & D', 'Chief Architect'],
+  achievements: ['NFC card reader/writer module', 'Mobile payment solution', 'API gateway', 'KYC', 'Anti money laudering and terrorist financing module', 'Security module (OTP, password rules)', 'Dynamic dashboard'],
+  technologies: ['Java', 'Grails', 'Spring MVC', 'MySQL', 'Oracle', 'SQL Server', 'NFC', 'Android', 'SqLite', 'Jenkins'],
+  summary: 'I was working with web and mobile technologies and focused on financial apps. With my R&D role I was working on PoC projects to lead the team on the way to do things.'
+};
+const experience5: ICvEntry = {
+  title: 'Senior Engineering Consultant',
+  startDate: new Date('2018-10-03'),
+  endDate: new Date('2019-05-31'),
+  company: {
+    name: 'MNS Consulting',
+    address: 'Dakar',
+    country: 'Senegal',
+    website: 'http://www.mns-consulting.com'
+  },
+  roles: ['Digital Architect', 'Tech Leader', 'Senior Developer', 'Scrum Master', 'DevOps'],
+  achievements: ['Technical specs', 'Technical costs', 'Architecture proposals'],
+  technologies: ['Java', 'Springboot', 'OpenLDAP', 'Postgresql', 'MongoDb', 'Thymeleaf', 'JWT', 'Eureka', 'Camunda', 'MarchRM', 'Archivematica', 'Maven', 'Nexus', 'Jenkins', 'Ansible', 'Supervisord'],
+  summary: 'I was head of the developement team and was directly dealing with project owners. We developed and delivered to Congo Brazaville State a single portal app for company creation.'
+};
+const experience6: ICvEntry = {
+  title: 'Backend Team Leader',
+  startDate: new Date('2019-06-11'),
+  endDate: new Date('2020-03-29'),
+  company: {
+    name: 'CTS',
+    address: 'Nowhere',
+    country: 'US',
+    website: 'http://www.ctsfares.com'
+  },
+  roles: ['Team Manager', 'Technical Referer', 'Chief Architect', 'Scrum Master', 'Mentor', 'DevOps'],
+  achievements: ['Built a microservice app', 'TDD on all projects', 'CI/CD', 'Mentoring interns', 'Code reviews'],
+  technologies: ['Python', 'FastApi', 'Django', 'JavaScript', 'NodeJs', 'Express', 'VueJs', 'Swagger', 'MongoDb', 'Postgresql', 'SqlAlchemy', 'Mongoose', 'Typescript', 'JWT', 'Uvicorn', 'Devpi', 'Heroku', 'Github Actions', 'Eureka'],
+  summary: 'As lead of a team mixed with Senior and Junior developers, I was able to bring new air of best practices in the developement process and in code base. I made team adopt TDD, PRs, code review and introduced CI/CD. I was able to split an existing Django app to several micro services for more scalability and used by leader companies in the travel business.'
+};
+const experience7: ICvEntry = {
+  title: 'Backend Team Leader',
+  startDate: new Date('2020-03-29'),
+  endDate: new Date('2020-12-10'),
+  company: {
+    name: 'Mondee',
+    address: 'Nowhere',
+    country: 'US',
+    website: 'http://www.mondee.com'
+  },
+  roles: ['Team Manager', 'Technical Referer', 'Chief Architect', 'Scrum Master'],
+  achievements: ['Built a microservice app', 'TDD on all projects', 'CI/CD'],
+  technologies: ['Typescript', 'JavaScript', 'NodeJs', 'Express', 'Swagger', 'Mongoose'],
+  summary: 'Inside a small team based on Senegal, I was head of the backend on remote basis location. Working directly with front-end team to deliver APIs for Travel industry. Consuming third party providers we were able to deliver restfull APIs for Tour, Car and Cruise with payment integration for two of them.'
+};
+const experience8: ICvEntry = {
+  title: 'Team Leader',
+  startDate: new Date('2020-12-14'),
+  company: {
+    name: 'Rocketrip Inc',
+    address: 'New York',
+    country: 'US',
+    website: 'http://www.rocketrip.com'
+  },
+  roles: ['Chief Architect', 'Team Lead', 'Full stack developper', 'Scrum Master'],
+  achievements: ['Sustainability Project', 'Travel Restrictions module', 'Knowledge Transfer', 'Planning', 'Evaluation', 'Code Review'],
+  technologies: ['Python', 'Django', 'Typescript', 'JavaScript', 'React', 'Express', 'GraphQl', 'Graphene', 'MySQL', 'MongoDb', 'Lerna', 'Docker', 'Redis', 'RabbitMQ', 'Celery', 'AWS', 'Datadog', 'Sentry', 'Mixpanel', 'Sendgrid', 'Zendesk', 'Intercom'],
+  summary: 'As Team Leader, I\'m responsible of technology choices, team management, and code quality. This position is fully remote. I work with DevOps team for CI/CD part of the project and with Project Owner to define what to do next and plan for deliveries. We took over an existing app focused on Business Travel. We added a sustainability module for C02 emissions and travel restrictions features (CoVid19 tests or quarantine, visa, etc.).'
+};
 const entries: Array<ICvEntry> = [
-  {
-    title: 'Team Leader',
-    startDate: new Date('2020-12-14'),
-    company: {
-      name: 'Rocketrip Inc',
-      address: 'New York',
-      country: 'US',
-      website: 'http://www.rocketrip.com'
-    },
-    roles: ['Chief Architect', 'Team Lead', 'Full stack developper', 'Scrum Master'],
-    achievements: ['Sustainability Project', 'Travel Restrictions module', 'Knowledge Transfer', 'Planning', 'Evaluation', 'Code Review'],
-    technologies: ['Python', 'Django', 'Typescript', 'JavaScript', 'React', 'Express', 'GraphQl', 'Graphene', 'MySQL', 'MongoDb', 'Lerna', 'Docker', 'Redis', 'RabbitMQ', 'Celery', 'AWS', 'Datadog', 'Sentry', 'Mixpanel', 'Sendgrid', 'Zendesk', 'Intercom'],
-    summary: 'As Team Leader, I\'m responsible of technology choices, team management, and code quality. This position is fully remote. I work with DevOps team for CI/CD part of the project and with Project Owner to define what to do next and plan for deliveries. We took over an existing app focused on Business Travel. We added a sustainability module for C02 emissions and travel restrictions features (CoVid19 tests or quarantine, visa, etc.).'
-  },
-  {
-    title: 'Backend Team Leader',
-    startDate: new Date('2020-03-29'),
-    endDate: new Date('2020-12-10'),
-    company: {
-      name: 'Mondee',
-      address: 'Nowhere',
-      country: 'US',
-      website: 'http://www.mondee.com'
-    },
-    roles: ['Team Manager', 'Technical Referer', 'Chief Architect', 'Scrum Master'],
-    achievements: ['Built a microservice app', 'TDD on all projects', 'CI/CD'],
-    technologies: ['Typescript', 'JavaScript', 'NodeJs', 'Express', 'Swagger', 'Mongoose'],
-    summary: 'Inside a small team based on Senegal, I was head of the backend on remote basis location. Working directly with front-end team to deliver APIs for Travel industry. Consuming third party providers we were able to deliver restfull APIs for Tour, Car and Cruise with payment integration for two of them.'
-  },
-  {
-    title: 'Backend Team Leader',
-    startDate: new Date('2019-06-11'),
-    endDate: new Date('2020-03-29'),
-    company: {
-      name: 'CTS',
-      address: 'Nowhere',
-      country: 'US',
-      website: 'http://www.ctsfares.com'
-    },
-    roles: ['Team Manager', 'Technical Referer', 'Chief Architect', 'Scrum Master', 'Mentor', 'DevOps'],
-    achievements: ['Built a microservice app', 'TDD on all projects', 'CI/CD', 'Mentoring interns'],
-    technologies: ['Python', 'FastApi', 'Django', 'JavaScript', 'NodeJs', 'Express', 'VueJs', 'Swagger', 'MongoDb', 'Postgresql', 'SqlAlchemy', 'Mongoose', 'Typescript', 'JWT', 'Uvicorn', 'Devpi', 'Heroku', 'Github Actions', 'Eureka'],
-    summary: 'As lead of a team mixed with Senior and Junior developers, I was able to bring new air of best practices in the developement process and in code base. I made team adopt TDD, PRs, code review and introduced CI/CD. I was able to split an existing Django app to several micro services for more scalability and used by leader companies in the travel business.'
-  },
-  {
-    title: 'Senior Engineering Consultant',
-    startDate: new Date('2018-10-03'),
-    endDate: new Date('2019-05-31'),
-    company: {
-      name: 'MNS Consulting',
-      address: 'Dakar',
-      country: 'Senegal',
-      website: 'http://www.mns-consulting.com'
-    },
-    roles: ['Digital Architect', 'Tech Leader', 'Senior Developer', 'Scrum Master', 'DevOps'],
-    achievements: ['Technical specs', 'Technical costs', 'Architecture proposals'],
-    technologies: ['Java', 'Springboot', 'OpenLDAP', 'Postgresql', 'MongoDb', 'Thymeleaf', 'JWT', 'Eureka', 'Camunda', 'MarchRM', 'Archivematica', 'Maven', 'Nexus', 'Jenkins', 'Ansible', 'Supervisord'],
-    summary: 'I was head of the developement team and was directly dealing with project owners. We developed and delivered to Congo Brazaville State a single portal app for company creation.'
-  },
-  {
-    title: 'Chief of Development Unit',
-    startDate: new Date('2017-04-01'),
-    endDate: new Date('2018-09-20'),
-    company: sensoft,
-    roles: ['Team Manager', 'R & D', 'Chief Architect'],
-    achievements: ['NFC card reader/writer module', 'Mobile payment solution', 'API gateway', 'KYC', 'Anti money laudering and terrorist financing module', 'Security module (OTP, password rules)', 'Dynamic dashboard'],
-    technologies: ['Java', 'Grails', 'Spring MVC', 'MySQL', 'Oracle', 'SQL Server', 'NFC', 'Android', 'SqLite', 'Jenkins'],
-    summary: 'I was working with web and mobile technologies and focused on financial apps. With my R&D role I was working on PoC projects to lead the team on the way to do things.'
-  },
-  {
-    title: 'Project Manager',
-    startDate: new Date('2017-02-10'),
-    endDate: new Date('2017-12-31'),
-    company: sensoft,
-    roles: ['Project Management', 'Integration', 'Interfacing'],
-    achievements: ['Bank mobility project (ACEP FEKKSILA Senegal)', 'On site fund collection automation (FUCEC Togo)', 'Small savings digitization (ASUSU SA Niger)', 'Digitization of transactions (CTISN Senegal)'],
-    technologies: [],
-    summary: 'I jumped in the world of project management to widen my knowledge. But at the same time I still get my hand in code. We were able to help some financial institutions to make their fund collection or transactions digital. We developed a mobile app interfacing with existing banking information systems.'
-  },
-  {
-    title: 'Lead Developer',
-    startDate: new Date('2016-02-12'),
-    endDate: new Date('2017-02-01'),
-    company: sensoft,
-    roles: ['Tech Lead', 'Senior Developer',],
-    achievements: ['Transactions module for money transfer app', 'Back office module for money transfer app'],
-    technologies: ['Java', 'Grails', 'Spring MVC', 'MySQL', 'Android', 'SqLite', 'Jenkins'],
-    summary: 'In that position I was a lead full-stack developer. We built a web and mobile (Android) money transfer app for several transactions: Sending, Payment, Refund, Cash In, Cash Out.'
-  },
-  {
-    title: 'Senior Developer',
-    startDate: new Date('2015-08-03'),
-    endDate: new Date('2016-02-05'),
-    company: sensoft,
-    roles: [],
-    achievements: [],
-    technologies: ['Java', 'Grails', 'Spring MVC', 'MySQL'],
-    summary: 'As principal developer working directly with the Lead developer, I was independent. I successfully built an accounting core module and settings module for a money transfer app.'
-  }
+  experience8,
+  experience7,
+  experience6,
+  experience5,
+  experience4,
+  experience3,
+  experience2,
+  experience1
 ]
 
 const ugb: IUniversity = {
@@ -125,40 +133,43 @@ const ugb: IUniversity = {
   country: 'Senegal',
   website: 'https://ugb.sn/'
 };
-
+const education1: ICvEducationEntry = {
+  startDate: new Date('2009-11-12'),
+  endDate: new Date('2011-08-12'),
+  university: ugb,
+  diploma: 'Associate degree',
+  field: 'Applied Mathematics and Computer Sciences',
+  comment: 'with honnors'
+};
+const education2: ICvEducationEntry = {
+  startDate: new Date('2012-03-27'),
+  endDate: new Date('2012-12-10'),
+  university: ugb,
+  diploma: 'Bachelor',
+  field: 'Computer Sciences',
+  comment: 'with honnors'
+};
+const education3: ICvEducationEntry =   {
+  startDate: new Date('2013-01-15'),
+  endDate: new Date('2013-12-31'),
+  university: ugb,
+  diploma: 'Master\'s degree',
+  field: 'Computer Sciences',
+  comment: 'with honnors'
+};
+const education4: ICvEducationEntry = {
+  startDate: new Date('2014-03-27'),
+  endDate: new Date('2014-12-31'),
+  university: ugb,
+  diploma: 'Postgraduate degree',
+  field: 'Computer Sciences',
+  comment: 'with honnors'
+};
 const educations: Array<ICvEducationEntry> = [
-  {
-    startDate: new Date('2014-03-27'),
-    endDate: new Date('2014-12-31'),
-    university: ugb,
-    diploma: 'Postgraduate degree',
-    field: 'Computer Sciences',
-    comment: 'with honnors'
-  },
-  {
-    startDate: new Date('2013-01-15'),
-    endDate: new Date('2013-12-31'),
-    university: ugb,
-    diploma: 'Master\'s degree',
-    field: 'Computer Sciences',
-    comment: 'with honnors'
-  },
-  {
-    startDate: new Date('2012-03-27'),
-    endDate: new Date('2012-12-10'),
-    university: ugb,
-    diploma: 'Bachelor',
-    field: 'Computer Sciences',
-    comment: 'with honnors'
-  },
-  {
-    startDate: new Date('2009-11-12'),
-    endDate: new Date('2011-08-12'),
-    university: ugb,
-    diploma: 'Associate degree',
-    field: 'Applied Mathematics and Computer Sciences',
-    comment: 'with honnors'
-  }
+  education4,
+  education3,
+  education2,
+  education1
 ];
 
 
@@ -187,4 +198,88 @@ export const cvData: CvData = {
         subsections: []
       }
     ]
+}
+const ugb_fr: IUniversity = {
+  ...ugb,
+  name: 'l\'Université Gaston Berger',
+  country: 'Sénégal'
+}
+const frenchCvData: CvData = {
+  basicInfo,
+    sections: [
+      {
+        title: 'Expériences',
+        items: [
+          {...experience8,
+          roles: ['Architecte en chef', 'Chef d\'équipe',  'Développeur full stack', 'Scrum Master'],
+          achievements: ['Projet d\'environnement durable', 'Module de restrictions de voyage', 'Transfert de compétence', 'Plannification', 'Évaluation', 'Revue de code'],
+          summary: 'En tant que chef d\'équipe, j\'ai la resposabilité des choix technologiques, la gestion de l\'équipe, et la qualité du code. C\'est un poste à distance. Je travaille avec l\'équipe de DevOps sur les parties Intégration Continue et Déploiement Continue du projet, mais aussi avec le Project Owner pour définir les prochaines étapes du travail ainsi que le plan de livraison. Nous avons hérité s\'une application focalisée sur les voyages d\'affaire. Nous avons ajouté un module d\environnment durable pour les émissions de CO2 et des fonctionnalités de restrictions de voyage (tests CoVid19 ou quarantaine, visa, etc.).'
+        },
+        {...experience7,
+          roles: ['Chef d\'équipe', 'Référant Technique', 'Architecte en Chef', 'Scrum Master'],
+          achievements: ['Construction d\'application micro services', 'Développement Dirigé par des Test', 'Intégration Continue / Déploiement Continu'],
+          summary: 'Dans une équipe basée au Sénégal et travaillant à distance, j\'ai été le chef du Backend. Nous avons travaillé en étroite collaboration avec l\'équipe du front-end en fournissant des APIs dans l\'industrie du Voyage. En consommant des APIs tierces, nous étions en mesure de fournir des APIs REST pour les Tours, Location de voiture et les croisières avec l\'intégration du paiement sur deux d\'entre elles.'
+        },
+        {...experience6,
+          roles: ['Chef d\'équipe', 'Référant Technique', 'Architecte en Chef ', 'Scrum Master', 'Mentor', 'DevOps'],
+          achievements: ['Construction d\'application micro services', 'Développement Dirigé par les Tests', 'Intégration Continue / Déploiement Continue', 'Tutorat des stagiaires', 'Revue de code'],
+          summary: 'En tant que chef d\'une équipe composée de développeurs séniors et de juniors, j\'ai été en mesure d\'apporter du souffle neuf de bonnes pratiques dans le processus de développement mais aussi du base de code. J\'ai fait adopter à l\'équipe le Développement dirigé par les tests, les Pull Requests, la revue de code ainsi que l\'introduction de l\'intégration continue et du déploiement continu. J\'ai été en mesure de séparer une application Django monolithique existante en plusieurs micro services pour plus d\'évolutivité.'
+        },
+        {...experience5,
+          title: 'Ingénieur Consultant Sénior',
+          roles: ['Architecte Digital', 'Directeur Technique', 'Développeur Sénior', 'Scrum Master', 'DevOps'],
+          achievements: ['Spécifications techniques', 'Propositions d\'architecture', 'Développement'],
+          summary: 'J\'ai été chef de l\'équipe de développement et travaillais  directment avec les chefs de project. Nous avons développé et délivré au Gouvernement du Congo Brazzaville un portail unique pour la création d\'entreprises.'
+        },
+        {...experience4,
+          title: 'Chef d\'unité de Développement',
+          roles: ['Chef d\'équipe', 'Recherche & Développement', 'Architecte en chef'],
+          achievements: ['Module d\'écriture/lecture de cartes NFC', 'Solution de paiement mobile', 'Passerelle d\'API', 'Module de lutte anti blanchiment de capitaux et financement du terrorisme', 'Module de sécurité (OTP, contraintes de mot de passe, etc.)', 'Tableau de bord dynamique'],
+          summary: 'Je travaillais avec les technologies web et mobile et focalisé sur les applications financières. Avec mon rôle de Recherche et Développement je concevais des projets de preuve de concept pour donner à l\'équipe des moyens de faire le choses.'
+        },
+        {...experience3,
+          title: 'Chef de Projet',
+          roles: ['Gestion de Projet', 'Intégration', 'Interfaçage'],
+          achievements: ['Projet de banque mobile (ACEP FEKKISILA Sénégal)', 'Automatisation des collectes sur site (FUCEC Togo)', 'Digitalisation de la petite épargne (ASUSU SA Niger)', 'Digitalisation des transactions (CTISN Sénégal)'],
+          summary: 'Je me suis plongé dans le monde de la gestion de projet pour élargir mes connaissances. Mais en même temps je continuais à développer. Nous avons pû aider des institutions financières à rendre digitales leurs transactions et collectes de fonds. Nous avons développé une application mobile qui s\'interface avec les systèmes d\'information bancaires.'
+        },
+        {...experience2,
+          title: 'Développeur en Chef',
+          roles: ['Développeur Senior', 'Lead Tech'],
+          achievements: ['Module Transactions pour une application de transfert d\'argent', 'Module Back office pour une application de transfert d\'argent'],
+          summary: 'À ce poste j\'étais le développeur en chef full-stack. Nous avons développé une application web et mobile (Android) de transfert d\'argent avec différents types de transactions: Envoi, Paiement, Remboursement, Dépôt de fonds, Appel de fonds'
+        },
+        {...experience1,
+          title: 'Développeur Sénior',
+          roles: [],
+          achievements: [],
+          summary: 'En tant que développeur principal travaillant sous la supervision du Développeur en chef, j\'étais indépendant. J\'ai réalisé avec succès un module de comptabilité et un module de paramétrage pour une application de transfert d\'argent.'
+        },
+        ],
+        subsections: []
+    }
+  ],
+  educations: [
+      {
+        title: 'Éducation',
+        items: [
+          {...education4, university: ugb_fr, diploma: "DEA (Master II)", field: "Informatique", comment: "Avec mention"},
+          {...education3, university: ugb_fr, diploma: "Maitrise", field: "Informatique", comment: "Avec mention"},
+          {...education2, university: ugb_fr, diploma: "Licence", field: "Informatique", comment: "Avec mention"},
+          {...education1, university: ugb_fr, diploma: "DEUG II", field: "Math Appliquées et Informatique", comment: "Avec mention"}
+        ],
+        subsections: []
+      }
+    ]
+}
+
+export const defaultCvData = cvData
+
+const translatedCVData: {[lang: string]: CvData} = {
+  "en": cvData,
+  "fr": frenchCvData
+}
+
+export function getCVData(lang: string) {
+  return translatedCVData[lang] || defaultCvData
 }
