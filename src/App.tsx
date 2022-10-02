@@ -10,7 +10,7 @@ import { Cv } from './components/Cv/Cv';
 import { getCVData } from './dkgndianko.resume';
 
 import {loadFontAwesome} from './faLoader';
-import { defaultLang, defaultMessages, loadLocale } from './locales/LocalProvider';
+import { defaultLang, loadLocale } from './locales/LocalProvider';
 import { polyfill } from './utilities/locale';
 
 
