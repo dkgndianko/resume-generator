@@ -26,11 +26,13 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 14.17.0
-      - uses: borales/actions-yarn@v3.0.0
-        with:
-          cmd: install
-        name: "Install dependencies"
+      # - uses: borales/actions-yarn@v3.0.0
+      #   with:
+      #     cmd: install
+      #   name: "Install dependencies"
       # - uses: fregante/setup-git-user@v1
+      - run: npm install
+        name: "Install dependencies"
       - name: Set user
         run: |
             cat >> .git/config << EOF
@@ -45,11 +47,13 @@ jobs:
       # will run `yarn deploy` command
       - name: Setup token
         run: git remote set-url origin https://dkgndianko:${{ secrets.GITHUB_TOKEN }}@github.com/dkgndianko/resume-generator
-      - uses: borales/actions-yarn@v3.0.0
-        name: "Deploy"
-        env:
-          SKIP_PREFLIGHT_CHECK: true
-          # GIT_AUTHOR_NAME: Mouhamad Nd. THIAM
-          # GIT_AUTHOR_EMAIL: thiamouhamadpro@gmail.com
-        with:
-          cmd: deploy
+      # - uses: borales/actions-yarn@v3.0.0
+      #   name: "Deploy"
+      #   env:
+      #     SKIP_PREFLIGHT_CHECK: true
+      #     # GIT_AUTHOR_NAME: Mouhamad Nd. THIAM
+      #     # GIT_AUTHOR_EMAIL: thiamouhamadpro@gmail.com
+      #   with:
+      #     cmd: deploy
+      - run: npm run deploy
+        name: Deploy
