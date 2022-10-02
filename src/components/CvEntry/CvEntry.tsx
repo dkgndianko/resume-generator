@@ -2,7 +2,7 @@ import { FontAwesomeIcon, FontAwesomeIconProps } from '@fortawesome/react-fontaw
 import { ICvEntry } from "../../types/cpTypes";
 import  "./CvEntry.css";
 import {formatDate} from '../../utilities/dateUtils';
-import { FormattedMessage } from 'react-intl';
+// import { FormattedMessage } from 'react-intl';
 import { getMessage } from '../../locales/LocalProvider';
 
 function SubEntry({faProps, name}: {faProps: FontAwesomeIconProps, name: string}) {
@@ -20,7 +20,8 @@ export function Entry ({entry}: {entry: ICvEntry}) {
         <div className="entry-title">
             {entry.title} {" "}
             <span className="entry-location">
-            <FormattedMessage id="entry.at"  defaultMessage="at" /> <a href={entry.company.website} target="_blank" rel="noreferrer">{entry.company.name} {" "}
+            {/* <FormattedMessage id="entry.at"  defaultMessage="at" /> */}
+            {getMessage('entry.at')} <a href={entry.company.website} target="_blank" rel="noreferrer">{entry.company.name} {" "}
             <FontAwesomeIcon icon="external-link-alt" size="1x" />
             </a>
             </span>

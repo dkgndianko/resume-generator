@@ -5,6 +5,8 @@
   "private": true,
   "type": "module",
   "dependencies": {
+    "@formatjs/intl": "^2.4.2",
+    "@formatjs/intl-locale": "^3.0.6",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
@@ -63,6 +65,7 @@
     "@types/gulp-replace": "^1.1.0",
     "@types/gulp-task-listing": "^0.0.32",
     "@types/html-pdf": "^2.2.0",
+    "@types/intl": "^1.2.0",
     "@types/remarkable": "^2.0.1",
     "chalk": "^4.1.1",
     "gh-pages": "^3.1.0",
