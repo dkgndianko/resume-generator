@@ -10,14 +10,17 @@ import { Cv } from './components/Cv/Cv';
 import { getCVData } from './dkgndianko.resume';
 
 import {loadFontAwesome} from './faLoader';
-import { defaultLang, defaultMessages } from './locales/LocalProvider';
+import { defaultLang, defaultMessages, loadLocale } from './locales/LocalProvider';
+import { polyfill } from './utilities/locale';
 
 
 loadFontAwesome()
+const loc = loadLocale(defaultLang)
 
 function App () {
+  polyfill()
   return (
-    <IntlProvider locale={defaultLang} messages={defaultMessages}>
+    <IntlProvider locale={loc.locale} messages={loc.messages} defaultLocale={loc.defaultLocale}>
     <div className='App'>
       <header className='App-header'>
       </header>

@@ -213,7 +213,7 @@ const frenchCvData: CvData = {
           {...experience8,
           roles: ['Architecte en chef', 'Chef d\'équipe',  'Développeur full stack', 'Scrum Master'],
           achievements: ['Projet d\'environnement durable', 'Module de restrictions de voyage', 'Transfert de compétence', 'Plannification', 'Évaluation', 'Revue de code'],
-          summary: 'En tant que chef d\'équipe, j\'ai la resposabilité des choix technologiques, la gestion de l\'équipe, et la qualité du code. C\'est un poste à distance. Je travaille avec l\'équipe de DevOps sur les parties Intégration Continue et Déploiement Continue du projet, mais aussi avec le Project Owner pour définir les prochaines étapes du travail ainsi que le plan de livraison. Nous avons hérité s\'une application focalisée sur les voyages d\'affaire. Nous avons ajouté un module d\environnment durable pour les émissions de CO2 et des fonctionnalités de restrictions de voyage (tests CoVid19 ou quarantaine, visa, etc.).'
+          summary: 'En tant que chef d\'équipe, j\'ai la resposabilité des choix technologiques, la gestion de l\'équipe, et la qualité du code. C\'est un poste à distance. Je travaille avec l\'équipe de DevOps sur les parties Intégration Continue et Déploiement Continue du projet, mais aussi avec le Project Owner pour définir les prochaines étapes du travail ainsi que le plan de livraison. Nous avons hérité d\'une application focalisée sur les voyages d\'affaire. Nous avons ajouté un module d\'environnment durable pour les émissions de CO2 et des fonctionnalités de restrictions de voyage (tests CoVid19 ou quarantaine, visa, etc.).'
         },
         {...experience7,
           roles: ['Chef d\'équipe', 'Référant Technique', 'Architecte en Chef', 'Scrum Master'],
