@@ -23,9 +23,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       # will run `yarn install` command
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14.17.0
       - uses: borales/actions-yarn@v3.0.0
         with:
           cmd: install
+        name: "Install dependencies"
       # - uses: fregante/setup-git-user@v1
       - name: Set user
         run: |
@@ -42,6 +46,7 @@ jobs:
       - name: Setup token
         run: git remote set-url origin https://dkgndianko:${{ secrets.GITHUB_TOKEN }}@github.com/dkgndianko/resume-generator
       - uses: borales/actions-yarn@v3.0.0
+        name: "Deploy"
         env:
           SKIP_PREFLIGHT_CHECK: true
           # GIT_AUTHOR_NAME: Mouhamad Nd. THIAM
