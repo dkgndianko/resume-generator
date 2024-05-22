@@ -17,6 +17,64 @@ const sensoft: ICompany = {
   website: 'http://www.sensoft.sn'
 }
 
+const freelanceCompany: ICompany = {
+  name: 'Freelance',
+  address: 'Keur Madiabel',
+  country: 'Senegal',
+  website: ''
+}
+
+const francoisRebelais: ICompany = {
+  name: 'Computer Sciences Laboratory, François Rabelais University of Tours',
+  address: 'Blois',
+  country: 'France',
+  website: 'https://lifat.univ-tours.fr/'
+}
+
+const misc1: ICvEntry = {
+  title: 'Freelance translator',
+  startDate: new Date('2012-05-03'),
+  endDate: new Date('2012-08-20'),
+  company: freelanceCompany,
+  roles: ["Translation", "Reviewing"],
+  achievements: [],
+  technologies: [],
+  summary: 'Translation and localization of Microsoft modules from English to Wolof'
+};
+
+const misc2: ICvEntry = {
+  title: 'Junior developer',
+  startDate: new Date('2012-08-03'),
+  endDate: new Date('2012-09-30'),
+  company: freelanceCompany,
+  roles: ["Modeling", "Development"],
+  achievements: [],
+  technologies: ["Java", "Swing", "AWT", "MySQL"],
+  summary: 'Development of drugstore management application'
+};
+
+const misc3: ICvEntry = {
+  title: 'Junior developer',
+  startDate: new Date('2014-04-03'),
+  endDate: new Date('2014-09-30'),
+  company: {...freelanceCompany, name: "Khoule & Freres"},
+  roles: ["Modeling", "Development"],
+  achievements: ["Deployed a SMS server in the Campus", "Ticketing platform for travelers"],
+  technologies: ["PHP", "Kannel", "MySQL"],
+  summary: 'Development of customer management application coupled to a messaging server. This application helps manage reservation for travelers and getting info for today news and retaurant menus at University Campus. Users do reservation and get info via SMS'
+};
+
+const misc4: ICvEntry = {
+  title: 'Intern',
+  startDate: new Date('2015-02-15'),
+  endDate: new Date('2015-07-15'),
+  company: francoisRebelais,
+  roles: ["Deep study of Prolexbase (french lexical database)", "Making of an ontology", "mapping between the database and the ontology"],
+  achievements: ["Integration of resources for the Semantic Web"],
+  technologies: ["RDF", "OWL", "MySQL"],
+  summary: 'An ontology on Prolexbase, a database of proper names in French, English, Polish, and other languages. The goal of this internship was to permit query over this database with Semantic Web tools and ensure the integration in the Linked Data.'
+};
+
 const experience1: ICvEntry = {
   title: 'Senior Developer',
   startDate: new Date('2015-08-03'),
@@ -53,7 +111,7 @@ const experience4: ICvEntry = {
   endDate: new Date('2018-09-20'),
   company: sensoft,
   roles: ['Team Manager', 'R & D', 'Chief Architect'],
-  achievements: ['NFC card reader/writer module', 'Mobile payment solution', 'API gateway', 'KYC', 'Anti money laudering and terrorist financing module', 'Security module (OTP, password rules)', 'Dynamic dashboard'],
+  achievements: ['NFC card reader/writer module', 'Mobile payment solution', 'API gateway', 'KYC & Anti money laudering and terrorist financing module', 'Security module (OTP, password rules)', 'Dynamic dashboard'],
   technologies: ['Java', 'Grails', 'Spring MVC', 'MySQL', 'Oracle', 'SQL Server', 'NFC', 'Android', 'SqLite', 'Jenkins'],
   summary: 'I was working with web and mobile technologies and focused on financial apps. With my R&D role I was working on PoC projects to lead the team on the way to do things.'
 };
@@ -67,9 +125,9 @@ const experience5: ICvEntry = {
     country: 'Senegal',
     website: 'http://www.mns-consulting.com'
   },
-  roles: ['Digital Architect', 'Tech Leader', 'Senior Developer', 'Scrum Master', 'DevOps'],
+  roles: ['Digital Architect', 'Tech Leader', 'Senior Developer', /*'Scrum Master',*/ 'DevOps'],
   achievements: ['Technical specs', 'Technical costs', 'Architecture proposals'],
-  technologies: ['Java', 'Springboot', 'OpenLDAP', 'Postgresql', 'MongoDb', 'Thymeleaf', 'JWT', 'Eureka', 'Camunda', 'MarchRM', 'Archivematica', 'Maven', 'Nexus', 'Jenkins', 'Ansible', 'Supervisord'],
+  technologies: ['Java', 'Springboot', 'OpenLDAP', 'Postgresql', 'MongoDb', /*'Thymeleaf',*/ 'JWT', 'Eureka', 'Camunda', 'MarchRM', /*'Archivematica',*/ 'Maven', 'Nexus', 'Jenkins', 'Ansible', 'Supervisord'],
   summary: 'I was head of the developement team and was directly dealing with project owners. We developed and delivered to Congo Brazaville State a single portal app for company creation.'
 };
 const experience6: ICvEntry = {
@@ -105,6 +163,7 @@ const experience7: ICvEntry = {
 const experience8: ICvEntry = {
   title: 'Team Leader',
   startDate: new Date('2020-12-14'),
+  endDate: new Date('2022-12-16'),
   company: {
     name: 'Rocketrip Inc',
     address: 'New York',
@@ -116,7 +175,39 @@ const experience8: ICvEntry = {
   technologies: ['Python', 'Django', 'Typescript', 'JavaScript', 'React', 'Express', 'GraphQl', 'Graphene', 'MySQL', 'MongoDb', 'Lerna', 'Docker', 'Redis', 'RabbitMQ', 'Celery', 'AWS', 'Datadog', 'Sentry', 'Mixpanel', 'Sendgrid', 'Zendesk', 'Intercom'],
   summary: 'As Team Leader, I\'m responsible of technology choices, team management, and code quality. This position is fully remote. I work with DevOps team for CI/CD part of the project and with Project Owner to define what to do next and plan for deliveries. We took over an existing app focused on Business Travel. We added a sustainability module for C02 emissions and travel restrictions features (CoVid19 tests or quarantine, visa, etc.).'
 };
+const experience9: ICvEntry = {
+  title: 'Full-stack Developer (freelance)',
+  startDate: new Date("2022-01-26"),
+  endDate: new Date("2022-07-08"),
+  company: {
+    name: 'Tentamus',
+    address: 'Berlin',
+    country: 'Germany',
+    website: 'https://www.tentamus.com'
+  },
+  roles: ["Architect", "Full stack developer", "Data Analyst", "DevOps"],
+  achievements: ["Trending app", "Analytics database", "Security", "Data sync", "CI/CD"],
+  technologies: ["React", "Grails", "Groovy", "Java", "SQL Server", "Docker", "Javascript", "Webpack", "Highcharts", "Tailwind CSS"],
+  summary: 'Taking over an existing portal app, refactored it and defined the CI/CD pipeline. We added security, data sync, set up an analytics database and developed a new React app based on Figma design.'
+}
+const experience10: ICvEntry = {
+  title: 'Application Performance Specialist (freelance)',
+  startDate: new Date("2022-12-19"),
+  endDate: new Date("2023-09-30"),
+  company: {
+    name: 'Sonatel',
+    address: 'Cite Keur Gorgui, Dakar',
+    country: 'Senegal',
+    website: 'https://www.sonatel.sn'
+  },
+  roles: ["App performance specialist"],
+  achievements: ["Defined KPIs to mesure performance", "Dashboard on Kibana", "recommendations with implementation guides"],
+  technologies: ["Java", "Spring Boot", "Kibana", "Elastic APM"],
+  summary: 'As some apps are slow, we proposed to study the why and recommend ways to make them performant. We studied the architecture and code. We defined KPIs to monitor the performance and came up with recommendations and guides to implement them.'
+}
 const entries: Array<ICvEntry> = [
+  experience10,
+  experience9,
   experience8,
   experience7,
   experience6,
@@ -124,7 +215,10 @@ const entries: Array<ICvEntry> = [
   experience4,
   experience3,
   experience2,
-  experience1
+  experience1,
+  misc4,
+  misc3,
+  misc2,
 ]
 
 const ugb: IUniversity = {
