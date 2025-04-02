@@ -54,7 +54,8 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### `yarn gen-pdf`
-This command will generate a PDF of the resume under the *build* folder.
+This command will generate a PDF of the resume under the *build* folder.\
+Some times its necessary to go to _package.json_ file and modify it to have `"homepage": "",`.
 
 
 ### Next steps:
