@@ -17,7 +17,6 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
-    "caniuse-lite": "1.0.30001632",
     "html-pdf": "^3.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -82,14 +81,7 @@
   "engines": {
     "node": "^14.17.0",
     "yarn": "^1.19.1"
-  },
-  "resolutions": {
-    "caniuse-lite": "1.0.30001632"
-  },
-  "overrides": {
-    "caniuse-lite": "1.0.30001632"
-  },
-  "comment": "resolutions and overrides are used to force babel use a specific version of caniuse-lite. See https://stackoverflow.com/questions/78856773/requires-babel-7-16-0-but-was-loaded-with-7-12-3"
+  }
 }
 
 
