@@ -31,7 +31,7 @@ jobs:
       #     cmd: install
       #   name: "Install dependencies"
       # - uses: fregante/setup-git-user@v1
-      - run: npm install
+      - run: yarn install
         name: "Install dependencies"
       - name: Set user
         run: |
@@ -55,5 +55,5 @@ jobs:
       #     # GIT_AUTHOR_EMAIL: thiamouhamadpro@gmail.com
       #   with:
       #     cmd: deploy
-      - run: npm run deploy
+      - run: yarn deploy
         name: Deploy
