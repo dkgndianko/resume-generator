@@ -20,7 +20,8 @@ const loc = loadLocale(defaultLang)
 function App () {
   polyfill()
   return (
-    <IntlProvider locale={loc.locale} messages={loc.messages} defaultLocale={loc.defaultLocale}>
+    // @ts-ignore 
+    <IntlProvider locale={loc.locale} messages={loc.messages || {}} defaultLocale={loc.defaultLocale}>
     <div className='App'>
       <header className='App-header'>
       </header>
