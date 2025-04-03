@@ -5,5 +5,6 @@ import { faCheckSquare, faCoffee, faSuitcase, faUser, faMapMarker, faAt, faMobil
 
 
 export const loadFontAwesome = () => {
+    //@ts-ignore
     library.add(faCheckSquare, faCoffee, faSuitcase, faUser, faMapMarker, faAt, faMobile, faExternalLinkAlt, faTrophy, faCrown, faGraduationCap);
 }
