@@ -81,6 +81,12 @@
   "engines": {
     "node": "^14.18.3",
     "yarn": "^1.19.1"
+  },
+  "resolutions": {
+    "caniuse-lite": "1.0.30001632"
+  },
+  "overrides": {
+    "caniuse-lite": "1.0.30001632"
   }
 }
 
