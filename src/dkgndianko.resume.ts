@@ -371,10 +371,37 @@ const frenchCvData: CvData = {
             title: 'Expériences',
             items: [
                 {
+                    ...experience14,
+                    title: 'Développeur Back-end',
+                    roles: ["Développeur Back-end"],
+                    achievements: [
+                        "🔗Système de suivi des résultats d'export de diffusion",
+                        "🏠Système de ré-estimation post-vente de biens",
+                        "📧Refonte des règles d'envoi d'emails de diffusion payante",
+                        "🏢Gestion des contacts pour la diffusion de biens locatifs",
+                        "🔄Suspension de diffusion au débriefing de compromis"
+                    ],
+                    summary: "Durant ce travail, j'ai démontré de solides compétences en développement full-stack avec un accent sur les fonctionnalités de plateforme immobilière, notamment autour des annonces de biens, de la gestion de diffusion et de l'intégration avec des services externes."
+                },
+                {
+                    ...experience13,
+                    title: 'Développeur Back-end',
+                    roles: ["Développeur Backend", "Spécialiste d'Intégration", "Ingénieur Base de Données", "Contributeur DevOps"],
+                    achievements: ["Intégration Tiers Payant (TPA) - Curacel", "Système de Devis & Gestion de Contrats B2B", "Gestion de Catalogue & Offres", "Systèmes de Notification & Communication", "Gestion des Bénéficiaires & Couvertures", "Migration Python 3.8 vers 3.10"],
+                    summary: "Mon travail est principalement axé sur le développement backend en utilisant Python/FastAPI, implémentant des fonctionnalités critiques pour la plateforme d'assurance santé incluant les intégrations tierces, la gestion de contrats B2B, la gestion de catalogue et les systèmes de notification."
+                },
+                {
+                    ...experience12,
+                    title: 'Consultant en Performance d\'Applications',
+                    roles: ["Consultant"],
+                    achievements: ["Revue d'architecture", "Plan de migration"],
+                    summary: "En tant que personne ayant travaillé dans le passé sur ce projet, j'ai la responsabilité de revoir l'architecture et de définir un plan de migration. J'ai examiné l'ensemble du code du projet et montré la taille réelle du code, la complexité et d'autres problèmes de code. À la fin, j'ai proposé une nouvelle architecture plus robuste avec un plan de migration en 5 étapes."
+                },
+                {
                     ...experience11,
                     title: "Fondateur",
                     roles: ["Directeur Général"],
-                    achievements: ["Application de décompte de résultats de vote"],
+                    achievements: ["Application de décompte de résultats de vote", "Système de Livraison"],
                     summary: "Chef d'une entité nouvellement créée avec des associés, j'ai la responsabilité de mettre en place les bases pour le bon fonctionnement. J'identifie les projets prioritaires, procède aux négociations avec les partenaires. Et pendant tout ce temps je continue à développer avec l'équipe. C'est ainsi que nous avons développpé une application de remontée et de décompte des résultats de vote."
                 }
                 ,
