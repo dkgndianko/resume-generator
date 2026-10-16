@@ -9,7 +9,7 @@ import './App.css';
 
 import { Cv } from './components/Cv/Cv';
 import { getCVData, defaultCvData } from './dkgndianko.resume';
-import { loadResumeDataFromFile, loadResumeDataFromString, isValidResumeData } from './utilities/resumeJsonLoader';
+import { loadResumeDataFromFile, loadResumeDataFromString, isValidResumeData, ILoadedResumeData } from './utilities/resumeJsonLoader';
 
 import {loadFontAwesome} from './faLoader';
 import { defaultLang, loadLocale } from './locales/LocalProvider';
@@ -17,11 +17,11 @@ import { polyfill } from './utilities/locale';
 
 
 loadFontAwesome()
-const loc = loadLocale(defaultLang)
 
 function App () {
   polyfill()
   const [cvData, setCvData] = useState(defaultCvData);
+  const [locale, setLocale] = useState(() => loadLocale(defaultLang));
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -30,13 +30,16 @@ function App () {
       // Check for URL parameter first
       const params = new URLSearchParams(window.location.search);
       let dataUrl = params.get('data');
+      const urlLang = params.get('lang');
       
       // If no URL parameter, check for injected global data (used for PDF generation)
       if (!dataUrl && window.__RESUME_DATA__) {
         try {
-          const data = loadResumeDataFromString(JSON.stringify(window.__RESUME_DATA__));
-          if (isValidResumeData(data)) {
-            setCvData(data);
+          const loaded: ILoadedResumeData = loadResumeDataFromString(JSON.stringify(window.__RESUME_DATA__));
+          if (isValidResumeData(loaded.cvData)) {
+            setCvData(loaded.cvData);
+            const resumeLang = loaded.lang || urlLang || defaultLang;
+            setLocale(loadLocale(resumeLang));
             return;
           }
         } catch (err) {
@@ -48,9 +51,11 @@ function App () {
         setLoading(true);
         setError(null);
         try {
-          const data = await loadResumeDataFromFile(dataUrl);
-          if (isValidResumeData(data)) {
-            setCvData(data);
+          const loaded: ILoadedResumeData = await loadResumeDataFromFile(dataUrl);
+          if (isValidResumeData(loaded.cvData)) {
+            setCvData(loaded.cvData);
+            const resumeLang = loaded.lang || urlLang || defaultLang;
+            setLocale(loadLocale(resumeLang));
           } else {
             throw new Error('Invalid resume data structure');
           }
@@ -59,9 +64,13 @@ function App () {
           setError(err instanceof Error ? err.message : 'Failed to load resume data');
           // Fall back to default data
           setCvData(defaultCvData);
+          setLocale(loadLocale(defaultLang));
         } finally {
           setLoading(false);
         }
+      } else if (urlLang) {
+        // If only lang is provided without data URL, update locale
+        setLocale(loadLocale(urlLang));
       }
     }
     
@@ -74,7 +83,7 @@ function App () {
 
   return (
     // @ts-ignore 
-    <IntlProvider locale={loc.locale} messages={loc.messages || {}} defaultLocale={loc.defaultLocale}>
+    <IntlProvider locale={locale.locale} messages={locale.messages || {}} defaultLocale={locale.defaultLocale}>
     <div className='App'>
       <header className='App-header'>
       </header>

@@ -13,15 +13,24 @@ let generatePdfWithPuppeteer;
  * Inject resume data from a JSON file into the HTML as a global variable
  * @param {string} htmlContent - The HTML content
  * @param {string} jsonPath - Path to the JSON file
+ * @param {string} lang - Optional language override
  * @returns {string} Modified HTML content with injected data
  */
-function injectResumeData(htmlContent, jsonPath) {
+function injectResumeData(htmlContent, jsonPath, lang) {
     if (!jsonPath || !fs.existsSync(jsonPath)) {
         return htmlContent;
     }
     
     try {
-        const jsonData = fs.readFileSync(jsonPath, 'utf8');
+        let jsonData = fs.readFileSync(jsonPath, 'utf8');
+        
+        // If language override is provided, inject it into the JSON
+        if (lang) {
+            const parsed = JSON.parse(jsonData);
+            parsed.lang = lang;
+            jsonData = JSON.stringify(parsed);
+        }
+        
         const scriptTag = `<script>window.__RESUME_DATA__ = ${jsonData};</script>`;
         
         // Inject before the closing </body> tag
@@ -46,12 +55,13 @@ task('resume-pdf-gen', async () => {
     const htmlPath = './build/index.html';
     const pdfPath = process.env.PDF_OUTPUT_PATH || './build/index.pdf';
     const jsonPath = process.env.RESUME_JSON_PATH;
+    const lang = process.env.RESUME_LANG;
     
     // If a JSON file is provided, inject it into the HTML
     if (jsonPath && fs.existsSync(jsonPath)) {
         console.log(cyan(`Injecting resume data from ${jsonPath}`));
         let htmlContent = fs.readFileSync(htmlPath, 'utf8');
-        htmlContent = injectResumeData(htmlContent, jsonPath);
+        htmlContent = injectResumeData(htmlContent, jsonPath, lang);
         fs.writeFileSync(htmlPath, htmlContent);
         console.log(green('Resume data injected successfully'));
     }

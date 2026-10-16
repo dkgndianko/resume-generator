@@ -5,6 +5,11 @@
   "type": "object",
   "required": ["basicInfo", "sections", "educations"],
   "properties": {
+    "lang": {
+      "type": "string",
+      "description": "Language code for the resume (e.g., 'en', 'fr'). Defaults to 'en' if not provided.",
+      "default": "en"
+    },
     "basicInfo": {
       "type": "object",
       "required": ["firstName", "lastName", "civility", "nationality", "address", "contacts", "photoUrl"],

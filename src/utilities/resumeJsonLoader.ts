@@ -70,9 +70,15 @@ export interface IJsonEducationSection {
 }
 
 export interface IJsonCvData {
+    lang?: string;
     basicInfo: IJsonBasicInformation;
     sections: Array<IJsonEntrySection>;
     educations: Array<IJsonEducationSection>;
+}
+
+export interface ILoadedResumeData {
+    cvData: CvData;
+    lang: string;
 }
 
 /**
@@ -199,7 +205,7 @@ function jsonEducationSectionToSection(json: IJsonEducationSection): ICvSection<
 /**
  * Convert JSON CV data to TypeScript CV data
  */
-export function jsonCvDataToCvData(json: IJsonCvData): CvData {
+export function jsonCvDataToCvData(json: IJsonCvData): { cvData: CvData; lang: string } {
     const sections = json.sections.map(section => {
         const convertedSection = jsonEntrySectionToSection(section);
         return {
@@ -217,9 +223,12 @@ export function jsonCvDataToCvData(json: IJsonCvData): CvData {
     });
 
     return {
-        basicInfo: jsonBasicInfoToBasicInfo(json.basicInfo),
-        sections,
-        educations
+        lang: json.lang || 'en',
+        cvData: {
+            basicInfo: jsonBasicInfoToBasicInfo(json.basicInfo),
+            sections,
+            educations
+        }
     };
 }
 
@@ -240,9 +249,9 @@ function sortEducationsByDateDesc(entries: ICvEducationEntry[]): ICvEducationEnt
 /**
  * Load resume data from a JSON file
  * @param filePath Path to the JSON file
- * @returns Promise<CvData>
+ * @returns Promise<ILoadedResumeData>
  */
-export async function loadResumeDataFromFile(filePath: string): Promise<CvData> {
+export async function loadResumeDataFromFile(filePath: string): Promise<ILoadedResumeData> {
     try {
         const response = await fetch(filePath);
         if (!response.ok) {
@@ -259,9 +268,9 @@ export async function loadResumeDataFromFile(filePath: string): Promise<CvData> 
 /**
  * Load resume data from a JSON string
  * @param jsonString JSON string containing resume data
- * @returns CvData
+ * @returns ILoadedResumeData
  */
-export function loadResumeDataFromString(jsonString: string): CvData {
+export function loadResumeDataFromString(jsonString: string): ILoadedResumeData {
     try {
         const jsonData: IJsonCvData = JSON.parse(jsonString);
         return jsonCvDataToCvData(jsonData);

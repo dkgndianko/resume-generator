@@ -91,6 +91,10 @@ yarn gen-pdf-with-json ./your-resume.json ./output/resume.pdf
 yarn gen-pdf-with-json --resume-file-path ./your-resume.json --output-path ./output/resume.pdf
 yarn gen-pdf-with-json -o ./output/resume.pdf
 
+# Specify language for the resume (overrides JSON lang field)
+yarn gen-pdf-with-json ./your-resume.json --lang fr
+yarn gen-pdf-with-json --resume-file-path ./your-resume.json --lang en --output-path ./output/resume.pdf
+
 # Without arguments, uses the default resume data and output path
 yarn gen-pdf-with-json
 ```

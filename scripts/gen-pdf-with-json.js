@@ -15,7 +15,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 function parseArgs(args) {
-    const result = { resumeFilePath: null, outputPath: null };
+    const result = { resumeFilePath: null, outputPath: null, lang: null };
     
     for (let i = 0; i < args.length; i++) {
         if (args[i] === '--resume-file-path' && i + 1 < args.length) {
@@ -27,12 +27,18 @@ function parseArgs(args) {
         } else if (args[i] === '-o' && i + 1 < args.length) {
             result.outputPath = args[i + 1];
             i++;
+        } else if (args[i] === '--lang' && i + 1 < args.length) {
+            result.lang = args[i + 1];
+            i++;
         } else if (!args[i].startsWith('-') && !result.resumeFilePath) {
             // First positional argument: resume file path
             result.resumeFilePath = args[i];
         } else if (!args[i].startsWith('-') && result.resumeFilePath && !result.outputPath) {
             // Second positional argument: output path
             result.outputPath = args[i];
+        } else if (!args[i].startsWith('-') && result.resumeFilePath && result.outputPath && !result.lang) {
+            // Third positional argument: lang
+            result.lang = args[i];
         }
     }
     
@@ -41,7 +47,7 @@ function parseArgs(args) {
 
 async function main() {
     const args = process.argv.slice(2);
-    const { resumeFilePath, outputPath } = parseArgs(args);
+    const { resumeFilePath, outputPath, lang } = parseArgs(args);
     
     // Build the app first
     console.log('Building the app...');
@@ -59,11 +65,12 @@ async function main() {
         SKIP_PREFLIGHT_CHECK: 'true'
     });
     
-    // Generate PDF with optional resume file path and output path
+    // Generate PDF with optional resume file path, output path, and lang
     const env = {
         NODE_OPTIONS: '--openssl-legacy-provider',
         ...(resumeFilePath ? { RESUME_JSON_PATH: resumeFilePath } : {}),
-        ...(outputPath ? { PDF_OUTPUT_PATH: outputPath } : {})
+        ...(outputPath ? { PDF_OUTPUT_PATH: outputPath } : {}),
+        ...(lang ? { RESUME_LANG: lang } : {})
     };
     
     if (resumeFilePath) {
@@ -74,6 +81,10 @@ async function main() {
     
     if (outputPath) {
         console.log(`PDF output path: ${outputPath}`);
+    }
+    
+    if (lang) {
+        console.log(`Resume language: ${lang}`);
     }
     
     await runCommand('yarn', ['_gen-pdf'], env);
