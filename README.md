@@ -57,6 +57,38 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 This command will generate a PDF of the resume under the *build* folder.\
 Some times its necessary to go to _package.json_ file and modify it to have `"homepage": "",`.
 
+### Using custom JSON data
+
+You can provide resume data as a JSON file instead of modifying the TypeScript code.
+
+#### JSON Schema
+
+The resume data format is defined in `public/resume.schema.json`. An example is available in `public/resume.example.json`.
+
+#### Loading data in the browser
+
+You can load custom resume data by adding a `data` query parameter to the URL:
+
+```
+http://localhost:3000?data=/path/to/your/resume.json
+```
+
+The JSON file should follow the structure defined in the schema. Dates should be in ISO 8601 format (e.g., `"2023-01-15T00:00:00.000Z"`).
+
+#### Generating PDF with custom JSON data
+
+Use the `gen-pdf-with-json` script to generate a PDF using a custom JSON file:
+
+```bash
+# Using a positional argument
+yarn gen-pdf-with-json ./your-resume.json
+
+# Using the --resume-file-path flag
+yarn gen-pdf-with-json --resume-file-path ./your-resume.json
+
+# Without arguments, uses the default resume data
+yarn gen-pdf-with-json
+```
 
 ### Next steps:
     1. Add CI/CD (Cicle CI, Github Actions, etc.) for automatic deployment after a PR merge

@@ -37,6 +37,7 @@
     "inline-build": "NODE_OPTIONS=--openssl-legacy-provider INLINE_RUNTIME_CHUNK=false GENERATE_SOURCEMAP=false SKIP_PREFLIGHT_CHECK=true gulp --gulpfile gulpfile.cjs inline-build",
     "_gen-pdf": "NODE_OPTIONS=--openssl-legacy-provider gulp --gulpfile gulpfile.cjs resume-pdf-gen",
     "gen-pdf": "NODE_OPTIONS=--openssl-legacy-provider SKIP_PREFLIGHT_CHECK=true yarn build && yarn inline-build && yarn _gen-pdf",
+    "gen-pdf-with-json": "node scripts/gen-pdf-with-json.js",
     "lint": "eslint ."
   },
   "eslintConfig": {

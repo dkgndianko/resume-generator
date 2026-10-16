@@ -32,6 +32,25 @@
   color: #61dafb;
 }
 
+.loading {
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.error {
+  padding: 20px;
+  background-color: #ffe6e6;
+  border: 1px solid #ff9999;
+  border-radius: 4px;
+  margin: 10px;
+  color: #cc0000;
+  font-family: Arial, sans-serif;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

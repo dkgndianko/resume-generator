@@ -1,0 +1,139 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Resume Data",
+  "description": "JSON schema for resume/CV data used by the resume generator",
+  "type": "object",
+  "required": ["basicInfo", "sections", "educations"],
+  "properties": {
+    "basicInfo": {
+      "type": "object",
+      "required": ["firstName", "lastName", "civility", "nationality", "address", "contacts", "photoUrl"],
+      "properties": {
+        "firstName": { "type": "string" },
+        "lastName": { "type": "string" },
+        "civility": { "type": "string" },
+        "nationality": { "type": "string" },
+        "address": { "type": "string" },
+        "contacts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["type", "contact"],
+            "properties": {
+              "type": { "type": "string" },
+              "contact": { "type": "string" }
+            }
+          }
+        },
+        "photoUrl": { "type": "string" }
+      }
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["title", "items", "subsections"],
+        "properties": {
+          "title": { "type": "string" },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["title", "startDate", "company", "roles", "achievements", "technologies", "summary"],
+              "properties": {
+                "title": { "type": "string" },
+                "startDate": { "type": "string", "format": "date-time" },
+                "endDate": { "type": "string", "format": "date-time" },
+                "company": {
+                  "type": "object",
+                  "required": ["name", "address", "country", "website"],
+                  "properties": {
+                    "name": { "type": "string" },
+                    "address": { "type": "string" },
+                    "country": { "type": "string" },
+                    "website": { "type": "string" }
+                  }
+                },
+                "roles": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                },
+                "achievements": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                },
+                "technologies": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                },
+                "summary": { "type": "string" }
+              }
+            }
+          },
+          "subsections": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["title", "items"],
+              "properties": {
+                "title": { "type": "string" },
+                "items": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "educations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["title", "items", "subsections"],
+        "properties": {
+          "title": { "type": "string" },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["startDate", "university", "diploma", "field"],
+              "properties": {
+                "startDate": { "type": "string", "format": "date-time" },
+                "endDate": { "type": "string", "format": "date-time" },
+                "university": {
+                  "type": "object",
+                  "required": ["name", "address", "country", "website"],
+                  "properties": {
+                    "name": { "type": "string" },
+                    "address": { "type": "string" },
+                    "country": { "type": "string" },
+                    "website": { "type": "string" }
+                  }
+                },
+                "diploma": { "type": "string" },
+                "field": { "type": "string" },
+                "comment": { "type": "string" }
+              }
+            }
+          },
+          "subsections": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["title", "items"],
+              "properties": {
+                "title": { "type": "string" },
+                "items": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
