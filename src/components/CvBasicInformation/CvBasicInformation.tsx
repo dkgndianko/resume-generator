@@ -33,9 +33,11 @@ export function BasicInformation ( {firstName, lastName, civility, address, cont
                 </div>
             )}
             </div>
-        <div className="image">
-            <img src={photoUrl} className="profile-photo" alt={`${lastName}`} />
-        </div>
+        {photoUrl && (
+            <div className="image">
+                <img src={photoUrl} className="profile-photo" alt={`${lastName}`} />
+            </div>
+        )}
         {/* <br style="clear:both;"/> */}
     </div>
     );

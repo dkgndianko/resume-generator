@@ -200,11 +200,41 @@ function jsonEducationSectionToSection(json: IJsonEducationSection): ICvSection<
  * Convert JSON CV data to TypeScript CV data
  */
 export function jsonCvDataToCvData(json: IJsonCvData): CvData {
+    const sections = json.sections.map(section => {
+        const convertedSection = jsonEntrySectionToSection(section);
+        return {
+            ...convertedSection,
+            items: sortEntriesByDateDesc(convertedSection.items)
+        };
+    });
+
+    const educations = json.educations.map(section => {
+        const convertedSection = jsonEducationSectionToSection(section);
+        return {
+            ...convertedSection,
+            items: sortEducationsByDateDesc(convertedSection.items)
+        };
+    });
+
     return {
         basicInfo: jsonBasicInfoToBasicInfo(json.basicInfo),
-        sections: json.sections.map(section => jsonEntrySectionToSection(section)),
-        educations: json.educations.map(section => jsonEducationSectionToSection(section))
+        sections,
+        educations
     };
+}
+
+/**
+ * Sort entries by startDate in descending order (most recent first)
+ */
+function sortEntriesByDateDesc(entries: ICvEntry[]): ICvEntry[] {
+    return entries.sort((a, b) => b.startDate.getTime() - a.startDate.getTime());
+}
+
+/**
+ * Sort education entries by startDate in descending order (most recent first)
+ */
+function sortEducationsByDateDesc(entries: ICvEducationEntry[]): ICvEducationEntry[] {
+    return entries.sort((a, b) => b.startDate.getTime() - a.startDate.getTime());
 }
 
 /**

@@ -86,7 +86,12 @@ yarn gen-pdf-with-json ./your-resume.json
 # Using the --resume-file-path flag
 yarn gen-pdf-with-json --resume-file-path ./your-resume.json
 
-# Without arguments, uses the default resume data
+# Specify output path for the PDF
+yarn gen-pdf-with-json ./your-resume.json ./output/resume.pdf
+yarn gen-pdf-with-json --resume-file-path ./your-resume.json --output-path ./output/resume.pdf
+yarn gen-pdf-with-json -o ./output/resume.pdf
+
+# Without arguments, uses the default resume data and output path
 yarn gen-pdf-with-json
 ```
 

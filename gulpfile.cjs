@@ -44,7 +44,7 @@ task('resume-pdf-gen', async () => {
     }
     
     const htmlPath = './build/index.html';
-    const pdfPath = './build/index.pdf';
+    const pdfPath = process.env.PDF_OUTPUT_PATH || './build/index.pdf';
     const jsonPath = process.env.RESUME_JSON_PATH;
     
     // If a JSON file is provided, inject it into the HTML
